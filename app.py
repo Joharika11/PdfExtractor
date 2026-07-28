@@ -73,7 +73,7 @@ def call_gemini(api_key: str, prompt: str) -> dict:
     genai.configure(api_key=api_key)
     # If this model name is unavailable in your account/region, swap it for
     # another current Gemini model (check https://ai.google.dev/gemini-api/docs/models).
-    model = genai.GenerativeModel("gemini-2.5-flash")
+   model = genai.GenerativeModel("gemini-flash-latest")
     response = model.generate_content(prompt)
     raw_text = response.text.strip()
 
